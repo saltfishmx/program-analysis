@@ -1,0 +1,12 @@
+[0@L4] x = 5; {x=5}
+[1@L5] y = 5; {x=5, y=5}
+[2@L6] z = 100; {x=5, y=5, z=100}
+[3@L6] nop; {x=5, y=5, z=100}
+[4@L7] if (x > y) goto 6; {x=5, y=5, z=100}
+[5@L7] goto 9; {x=5, y=5, z=100}
+[6@L7] nop; {x=5, y=5, z=100}
+[7@L8] invokevirtual %this.<testgt: void use(int)>(z); {x=5, y=5, z=100}
+[8@L7] goto 3; {x=5, y=5, z=100}
+[9@L7] nop; {x=5, y=5, z=100}
+[10@L10] invokevirtual %this.<testgt: void dead()>(); {x=5, y=5, z=100}
+[11@L10] return; {x=5, y=5, z=100}
